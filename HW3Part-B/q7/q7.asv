@@ -1,0 +1,13 @@
+unzip('MerchData.zip');
+
+imds = imageDatastore('MerchData','IncludeSubfolders',true,'LabelSource','foldernames');
+
+
+tbl = countEachLabel(imds);
+
+figure
+montage(imds.Files(1:16:end))
+
+
+
+
